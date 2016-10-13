@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BluetoothActivity" >
+    
+     <FrameLayout
+        android:id="@+id/bluetooth_receiveVoice_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <com.taozhang.filetransition.ui.customComponent.WaterDropLoadingView
+            android:id="@+id/bluetooth_receiveVoice_waterDrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bluetooth_recieveTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/custom_green"
+            android:text="正在接收..."
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/bluetooth_tv_receiveVoice_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="文件名" />
+    </FrameLayout>
+    
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/custom_green"
+        android:text="请选择蓝牙设备"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:text="历史匹配"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/lv_bluetooth_bonded"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.191" />
+
+        <Button
+            android:id="@+id/btn_bluetooth_discovery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.618"
+            android:background="@drawable/shape"
+            android:text="搜索新设备" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.191" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_bluetooth_discovery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1" >
+    </ListView>
+
+</LinearLayout>

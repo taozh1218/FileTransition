@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/btn_fileManager_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/custom_green"
+        android:text="文件管理器"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_fileManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_fileManager_title"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/img_fileManager_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_type2" />
+
+        <TextView
+            android:id="@+id/tv_fileManager_directory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="当前目录："
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@id/ll_fileManager"
+        android:id="@+id/lv_fileManagerAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/img_fileManager_more"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_green_32" />
+    </RelativeLayout>
+
+</RelativeLayout>

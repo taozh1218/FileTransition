@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <shape xmlns:android="http//schemas.android.com/apk/res/android" -->
+<!-- android:shape="oval" > -->
+
+
+<!-- 填充的颜色 -->
+<!-- <solid android:color="#0AA284" /> -->
+<!-- 设置按钮的四个角为弧形 -->
+<!-- android:radius 弧形的半径 -->
+<!-- <corners android:radius="25dip" /> -->
+
+
+<!-- padding：Button里面的文字与Button边界的间隔 -->
+<!-- <padding -->
+<!-- android:bottom="10dp" -->
+<!-- android:left="10dp" -->
+<!-- android:right="10dp" -->
+<!-- android:top="10dp" /> -->
+
+
+<!-- </shape> -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#0AA284" />
+
+            <corners
+                android:bottomLeftRadius="10dip"
+                android:bottomRightRadius="10dip"
+                android:topLeftRadius="10dip"
+                android:topRightRadius="10dip" />
+        </shape>
+    </item>
+    <item
+        android:bottom="1px"
+        android:left="1px"
+        android:right="1px"
+        android:top="1px">
+        <shape>
+            <gradient
+                android:angle="90"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="#0AA284"
+                android:startColor="#0AA284"
+                android:type="linear" />
+
+            <corners
+                android:bottomLeftRadius="10dip"
+                android:bottomRightRadius="10dip"
+                android:topLeftRadius="10dip"
+                android:topRightRadius="10dip" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/custom_green"
+        android:text="历史记录" 
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tv_historyFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is History Frag"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_historyFrag_fileManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用文件管理器"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/gridView_viewPager_historyFrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:numColumns="3"
+        android:padding="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+    <TextView
+        android:id="@+id/tv_historyFrag_tishi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="您接收的文件都存储在fileTrasition文件夹下" />
+
+    <Button
+        android:id="@+id/btn_btn_historyFrag_transition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape"
+        android:text="	去文件管理器	" 
+        android:visibility="gone"
+        />
+
+</LinearLayout>

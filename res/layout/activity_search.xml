@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.taozhang.filetransition.ui.SearchFragment">
+
+     <Button
+        android:id="@+id/searchServerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/custom_green"
+        android:text="扫描"
+        android:textColor="@color/white" />
+    <com.taozhang.filetransition.ui.customComponent.SearchDevicesView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/searchDevice"
+        android:layout_below="@id/searchServerTitle"
+        
+        />
+
+    <ListView
+        android:id="@+id/lv_searchHostAct"
+        android:layout_below="@id/searchDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </ListView>
+</RelativeLayout>

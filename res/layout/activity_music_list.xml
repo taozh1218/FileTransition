@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TypeListActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_fileTypeAct_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/custom_green"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_typeListAct_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/custom_green"
+            android:src="@drawable/back_grey" />
+
+        <Button
+            android:id="@+id/btn_typeListAct_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/custom_green"
+            android:text="文件列表"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/custom_green"
+            android:src="@drawable/back_type2"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <com.taozhang.filetransition.ui.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_MusicListAct_files"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_fileTypeAct_title"
+        android:background="#F5F5F5" >
+    </com.taozhang.filetransition.ui.swipemenulistview.SwipeMenuListView>
+
+    <LinearLayout
+        android:id="@+id/ll_typeListAct_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/ll_typeListAct_zhantie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/zhantie_blue_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="粘贴" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_typeListAct_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/cancel_blue_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="取消" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
